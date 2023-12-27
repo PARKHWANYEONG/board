@@ -2,6 +2,9 @@ package com.hwan.board.domain;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class User {
 
@@ -20,4 +23,7 @@ public class User {
 
     @Column(nullable = false, length = 30, unique = true)
     private String nickname;
+
+    @OneToMany(mappedBy = "user")
+    private List<Post> posts = new ArrayList<>();
 }
