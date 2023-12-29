@@ -1,0 +1,25 @@
+<html th:replace="~{layout/layoutFile :: layout(~{::title},~{::section})}"
+      xmlns:th="html://www.thymeleaf.org">
+
+<title>Board</title>
+
+<section>
+  <div class="container">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>게시글 번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>작성일</th>
+        <th>조회수</th>
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <div class="text-right">
+      <a href="/posts" class="btn btn-info" role="button">📝글쓰기</a>
+    </div>
+  </div>
+</section>
