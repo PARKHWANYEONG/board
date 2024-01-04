@@ -1,10 +1,16 @@
 package com.hwan.board.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class User extends BaseTimeEntity {
 
@@ -26,4 +32,8 @@ public class User extends BaseTimeEntity {
 
     @OneToMany(mappedBy = "user")
     private List<Post> posts = new ArrayList<>();
+
+    @Enumerated(value = EnumType.STRING)
+    @Column(nullable = false)
+    private Role role;
 }
