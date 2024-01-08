@@ -17,7 +17,7 @@ const main = {
 
         $.ajax({
             type: 'POST',
-            url: '/api/user',
+            url: '/auth/join',
             data: JSON.stringify(data),
             contentType: 'application/json; charset=utf-8',
             dataType: 'JSON'
