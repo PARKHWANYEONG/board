@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class PostsController {
+public class PostController {
 
-    @GetMapping("/posts")
+    @GetMapping("/post")
     public String write() {
-        return "/posts/writeForm";
+        return "/post/writeForm";
     }
 }
