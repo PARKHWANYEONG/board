@@ -1,0 +1,20 @@
+<html th:replace="~{layout/layoutFile :: layout(~{::title}, ~{::section})}"
+      xmlns:th="html://www.thymeleaf.org">
+
+<title>Board - 글쓰기</title>
+
+<section>
+  <div class="container mt-5">
+    <form>
+      <div class="form-group">
+        <label for="title">제목</label>
+        <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요" name="title">
+      </div>
+      <div class="form-group">
+        <label for="content">내용</label>
+        <input type="textarea" class="form-control summernote" id="content" name="content">
+      </div>
+      <button id="btn-post-save" type="button" class="btn btn-primary">작성하기</button>
+    </form>
+  </div>
+</section>
