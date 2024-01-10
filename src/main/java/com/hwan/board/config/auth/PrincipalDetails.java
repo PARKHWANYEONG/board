@@ -1,6 +1,7 @@
 package com.hwan.board.config.auth;
 
 import com.hwan.board.domain.User;
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -10,6 +11,7 @@ import java.util.Collection;
 /**
  *  스프링 시큐리티에서 로그인 요청을 가로채서 진행
  */
+@Getter
 public class PrincipalDetails implements UserDetails {
 
     private  User user;
