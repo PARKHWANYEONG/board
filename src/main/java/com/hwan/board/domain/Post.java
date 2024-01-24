@@ -23,7 +23,7 @@ public class Post extends BaseTimeEntity {
     @Column(length = 300, nullable = false)
     private String title;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
+    @Column(columnDefinition = "MEDIUMTEXT", nullable = false)
     private String postContent;
 
     @Column(columnDefinition = "integer default 0")
