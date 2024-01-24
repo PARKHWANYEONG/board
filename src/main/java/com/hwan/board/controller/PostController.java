@@ -33,6 +33,13 @@ public class PostController {
         return "/post/writeForm";
     }
 
+    @GetMapping("/post/{postId}")
+    public String postDetails(@PathVariable(name = "postId") Long id, Model model) {
+        PostDto postDto = postService.findById(id);
+        model.addAttribute("postDto", postDto);
+        return "/post/details";
+    }
+
     @ResponseBody
     @PostMapping("/post")
     public ResponseDto<Integer> save(@RequestBody PostDto postDto , @AuthenticationPrincipal PrincipalDetails principal) {

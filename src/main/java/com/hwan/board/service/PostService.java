@@ -31,4 +31,12 @@ public class PostService {
     public List<Post> findAll() {
         return postRepository.findAll();
     }
+
+    @Transactional(readOnly = true)
+    public PostDto findById(Long postId) {
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new IllegalArgumentException("postId를 찾을 수 없습니다."));
+
+        return new PostDto(post);
+    }
 }
